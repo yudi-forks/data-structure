@@ -11,7 +11,7 @@
 // Defining statickStack
 
 template <typename T>
-class statickStack {
+class staticStack {
 private:
     int length = -1;
     int pos = 0;
@@ -19,21 +19,21 @@ private:
 
 public:
     // Default constructor -> Creates null stack.
-    statickStack<T> () {
+    staticStack<T> () {
         this->length = -1;
         this->pos = 0;
         this->address = NULL;
     }
 
     // Length-based constructor.
-    statickStack<T> (int length) {
+    staticStack<T> (int length) {
         this->length = length;
         this->pos = 0;
         this->address = (T*)calloc (length, sizeof(T));
     }
 
     // Destructor: turns the stack null.
-    ~statickStack<T> () {
+    ~staticStack<T> () {
         this->length = -1;
         this->pos = 0;
         this->address = NULL;
