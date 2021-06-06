@@ -1,0 +1,7 @@
+# Visual Studio Code - Debug & Run scripts
+.vscode/
+
+# Driver.cpp which i use to test my libraries
+driver.cpp
+driver.exe
+
