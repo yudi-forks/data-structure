@@ -2,7 +2,7 @@
 #define STATICSTACK_H
 
 #include <stdlib.h>
-#include <iostream>
+#include <stdio.h>
 // #include <stack>
 // Will use it in the future to promote compatibility with CPP stack.
 // I don't expect my code to be more optimized than the <stack> library.
@@ -11,7 +11,7 @@
 // Defining statickStack
 
 template <typename T>
-class staticStack {
+class StaticStack {
 private:
     int length = -1;
     int pos = 0;
@@ -19,21 +19,21 @@ private:
 
 public:
     // Default constructor -> Creates null stack.
-    staticStack<T> () {
+    StaticStack<T> () {
         this->length = -1;
         this->pos = 0;
         this->address = NULL;
     }
 
     // Length-based constructor.
-    staticStack<T> (int length) {
+    StaticStack<T> (int length) {
         this->length = length;
         this->pos = 0;
         this->address = (T*)calloc (length, sizeof(T));
     }
 
     // Destructor: turns the stack null.
-    ~staticStack<T> () {
+    ~StaticStack<T> () {
         this->length = -1;
         this->pos = 0;
         this->address = NULL;
