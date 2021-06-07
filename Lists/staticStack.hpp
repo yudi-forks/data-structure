@@ -36,6 +36,9 @@ public:
     ~StaticStack<T> () {
         this->length = -1;
         this->pos = 0;
+        // Freeing this->address will deallocate the array from memory.
+        free(this->address);
+        // Setting this->address to NULL, as the array is now deallocated.
         this->address = NULL;
     }
 
