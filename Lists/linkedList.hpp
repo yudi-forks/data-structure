@@ -87,6 +87,11 @@ public:
         }
     }
 
+    // Get the current length
+    int getLength () {
+        return (this->length);
+    }
+
     T operator[] (int index) {
         Node<T> *target = this->accessIndex(index);
 
